@@ -1,0 +1,295 @@
+{
+  "project_info": {
+    "project_number": "703733227981",
+    "project_id": "seaportal-9cca9",
+    "storage_bucket": "seaportal-9cca9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:703733227981:android:036e0f76faf0e972dfe484",
+        "android_client_info": {
+          "package_name": "com.hapeye.autohouse"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCM24XOW2RiLXbw2rL6Y8jVPMn_2MkN8cY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:703733227981:android:37c0dff96bf51c5bdfe484",
+        "android_client_info": {
+          "package_name": "com.hapeye.high_speed"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCM24XOW2RiLXbw2rL6Y8jVPMn_2MkN8cY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:703733227981:android:1a21f3ad52d769d3dfe484",
+        "android_client_info": {
+          "package_name": "com.hapeye.highspeed"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCM24XOW2RiLXbw2rL6Y8jVPMn_2MkN8cY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:703733227981:android:91bf369aa9189d88dfe484",
+        "android_client_info": {
+          "package_name": "com.hapeye.highspeeds"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCM24XOW2RiLXbw2rL6Y8jVPMn_2MkN8cY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:703733227981:android:bcddca3503c186eadfe484",
+        "android_client_info": {
+          "package_name": "com.hapeye.mgs_trading_ecom"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCM24XOW2RiLXbw2rL6Y8jVPMn_2MkN8cY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:703733227981:android:36ab81952ada6ef1dfe484",
+        "android_client_info": {
+          "package_name": "com.hapeye.nh_market"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCM24XOW2RiLXbw2rL6Y8jVPMn_2MkN8cY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:703733227981:android:30afe481ad5c4729dfe484",
+        "android_client_info": {
+          "package_name": "com.hapeye.sd_bakery_supply"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCM24XOW2RiLXbw2rL6Y8jVPMn_2MkN8cY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:703733227981:android:4cb7882ebac634bfdfe484",
+        "android_client_info": {
+          "package_name": "com.hapeye.sea_merchant"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCM24XOW2RiLXbw2rL6Y8jVPMn_2MkN8cY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:703733227981:android:9c4f73dcdc53553bdfe484",
+        "android_client_info": {
+          "package_name": "com.hapeye.seamerchant"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCM24XOW2RiLXbw2rL6Y8jVPMn_2MkN8cY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:703733227981:android:f990789846b8f189dfe484",
+        "android_client_info": {
+          "package_name": "com.hapeye.seaportal"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCM24XOW2RiLXbw2rL6Y8jVPMn_2MkN8cY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:703733227981:android:efb48a3daf80cf9edfe484",
+        "android_client_info": {
+          "package_name": "com.hapeye.seaportal.charity"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCM24XOW2RiLXbw2rL6Y8jVPMn_2MkN8cY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:703733227981:android:24ada7d47756f4dadfe484",
+        "android_client_info": {
+          "package_name": "com.hapeye.seaportal.sstore"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCM24XOW2RiLXbw2rL6Y8jVPMn_2MkN8cY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:703733227981:android:920305481ed21e0ddfe484",
+        "android_client_info": {
+          "package_name": "com.hapeye.spbakerysupport"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCM24XOW2RiLXbw2rL6Y8jVPMn_2MkN8cY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:703733227981:android:70a5914d283a815fdfe484",
+        "android_client_info": {
+          "package_name": "com.hapeye.unijoy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCM24XOW2RiLXbw2rL6Y8jVPMn_2MkN8cY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:703733227981:android:bf848f7fa8c0eaaedfe484",
+        "android_client_info": {
+          "package_name": "com.hapeye.water_master"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCM24XOW2RiLXbw2rL6Y8jVPMn_2MkN8cY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

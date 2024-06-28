@@ -1,0 +1,167 @@
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:pull_to_refresh_flutter3/pull_to_refresh_flutter3.dart';
+import '../../app_widgets/back_button.dart';
+import '../../app_widgets/custom_loading_widget.dart';
+import '../../app_widgets/empty_view_widget.dart';
+import '../../app_widgets/footer_widget.dart';
+import '../../controllers/product_controller.dart';
+import '../../routes_helper/routes_helper.dart';
+import '../../utils/app_color.dart';
+import '../../utils/dimesions.dart';
+import '../home/home_widgets/product_card_widget.dart';
+import '../product_detail_screen/product_detail_screen.dart';
+
+class ProductByScreen extends StatefulWidget {
+  final String title;
+  final bool isBrand;
+  final int id;
+  const ProductByScreen(
+      {super.key,
+      required this.title,
+      required this.isBrand,
+      required this.id});
+
+  @override
+  State<ProductByScreen> createState() => _ProductByScreenState();
+}
+
+class _ProductByScreenState extends State<ProductByScreen> {
+  late RefreshController _refreshController;
+  @override
+  void initState() {
+    _refreshController = RefreshController();
+
+    super.initState();
+  }
+
+  final ProductController productController = Get.find<ProductController>();
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        elevation: 0,
+        primary: true,
+        leading: backButton(color: Colors.white),
+        title: Text(
+          widget.title,
+          style: Theme.of(context)
+              .textTheme
+              .titleSmall!
+              .copyWith(color: Colors.white),
+        ),
+        centerTitle: false,
+        scrolledUnderElevation: 0,
+        backgroundColor: AppColor.primaryClr,
+        actions: [
+          IconButton.filled(
+              color: Colors.white.withOpacity(0.2),
+              onPressed: () => Get.toNamed(RouteHelper.searchScreen),
+              icon: Icon(
+                Icons.search,
+                color: Colors.white,
+                size: Dimesion.iconSize16,
+              )),
+        ],
+      ),
+      body: productController.obx(
+          (state) => SmartRefresher(
+                controller: _refreshController,
+                onRefresh: _onRefresh,
+                footer: Obx(
+                  () => footer(
+                      canLoadMore: widget.isBrand
+                          ? productController.productByBrandCanloadMore.value
+                          : productController
+                              .productByCategoryCanloadMore.value),
+                ),
+                onLoading: _onLoading,
+                enablePullDown: true,
+                enablePullUp: true,
+                header: const WaterDropHeader(),
+                physics: const BouncingScrollPhysics(),
+                child: GridView.builder(
+                  padding: EdgeInsets.all(Dimesion.height10),
+                  itemCount: widget.isBrand
+                      ? productController.productsByBrand.length
+                      : productController.productsByCategory.length,
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 2,
+                      mainAxisExtent: Dimesion.screenHeight * 0.22,
+                      mainAxisSpacing: Dimesion.width5,
+                      crossAxisSpacing: Dimesion.width10),
+                  shrinkWrap: true,
+                  physics: const BouncingScrollPhysics(),
+                  itemBuilder: (_, index) => InkWell(
+                    onTap: () {
+                      int id = widget.isBrand
+                          ? productController.productsByBrand[index].id!
+                          : productController.productsByCategory[index].id!;
+                      Get.toNamed(RouteHelper.productDetailScreen,
+                          arguments: ProductDetailScreen(
+                            id: id,
+                          ));
+                    },
+                    child: ProductCard(
+                      productData: widget.isBrand
+                          ? productController.productsByBrand[index]
+                          : productController.productsByCategory[index],
+                    ),
+                  ),
+                ),
+              ),
+          onLoading: const Center(
+            child: CustomLoadingWidget(),
+          ),
+          onEmpty: EmptyViewWidget(refresh: () {
+            if (widget.isBrand) {
+              productController.getProductByBrand(
+                  id: widget.id, isLoadmore: false);
+            } else {
+              productController.getProductsByCategory(
+                  id: widget.id, isLoadmore: false);
+            }
+          }),
+          onError: (error) => Center(
+                child: Text("$error"),
+              )),
+    );
+  }
+
+  Future<void> _onRefresh() async {
+    await Future.delayed(const Duration(milliseconds: 300));
+    if (widget.isBrand) {
+      productController.productByBrandPage.value = 1;
+      productController.productsByBrand.clear();
+      productController.getProductByBrand(id: widget.id, isLoadmore: false);
+    } else {
+      productController.productByCategoryPage.value = 1;
+      productController.productsByCategory.clear();
+      productController.getProductsByCategory(id: widget.id, isLoadmore: false);
+    }
+    _refreshController.refreshCompleted();
+  }
+
+  Future<void> _onLoading() async {
+    if (widget.isBrand) {
+      await Future.delayed(const Duration(milliseconds: 300));
+      if (productController.productByBrandCanloadMore.value) {
+        productController.productByBrandPage.value++;
+        productController.getProductByBrand(id: widget.id, isLoadmore: true);
+      } else {
+        _refreshController.loadNoData();
+      }
+    } else {
+      await Future.delayed(const Duration(milliseconds: 300));
+      if (productController.productByCategoryCanloadMore.value) {
+        productController.productByCategoryPage.value++;
+        productController.getProductsByCategory(
+            id: widget.id, isLoadmore: true);
+      } else {
+        _refreshController.loadNoData();
+      }
+    }
+
+    _refreshController.loadComplete();
+  }
+}
