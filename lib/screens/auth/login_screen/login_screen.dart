@@ -189,7 +189,7 @@ class LoginScreen extends GetView<AuthController> {
         bottomNavigationBar: BottomAppBar(
             elevation: 0,
             color: Colors.transparent,
-            child: Text("Developed By App.com.mm",
+            child: Text("Developed By THN",
                 textAlign: TextAlign.center,
                 style: Theme.of(context).textTheme.labelSmall)),
       ),

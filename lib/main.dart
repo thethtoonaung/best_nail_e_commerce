@@ -9,13 +9,13 @@ import 'package:get/get.dart';
 
 import 'appbinding/app_binding.dart';
 import 'appbinding/initial_binding.dart';
-import 'firebase_options.dart';
+// import 'firebase_options.dart';
 import 'language/language.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   if (Platform.isAndroid) {
-    Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+    // Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   } else {
     Firebase.initializeApp();
   }
@@ -47,6 +47,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-
-
